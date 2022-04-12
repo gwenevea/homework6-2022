@@ -47,19 +47,40 @@ document.querySelector("#mute").addEventListener("click", function () {
 	if (video.muted == false) {
 		console.log("Muting video");
 		video.muted = true;
+		document.querySelector('#mute').innerHTML = "Unmute";
 	}
 
 	else {
 		console.log("Unmuting video");
 		video.muted = false;
+		document.querySelector('#mute').innerHTML = "Mute";
 	}
 }
 
 //volume
 document.querySelector("#slider").addEventListener("click", function () {
+	//diff event type?
 	console.log("Changing volume");
+	//why this
+	video.volume = this.value / 100;
 	//video.volume = value / 100;
-	document.querySelector("#volume").innerHTML = //????;
+	//video.volume += 0.1;
+	//document.querySelector("#volume").innerHTML = (video.volume * 100)"%";
+	document.querySelector("#volume").innerHTML = `${video.volume * 100}%`;
+}
+
+document.querySelector("#vintage").addEventListener("click", function () {
+	console.log("Going old school");
+	video.classList.add('oldSchool');
+	//add code
+	// video width? document.querySelector("#video width").innerHTML = 600;
+}
+
+document.querySelector("#orig").addEventListener("click", function () {
+	console.log("Going new school");
+	video.classList.remove('oldSchool');
+	//add code
+	// video width? document.querySelector("#video width").innerHTML = 640;
 }
 
  //volume slider, review the this.
