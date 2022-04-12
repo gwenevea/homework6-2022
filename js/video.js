@@ -55,7 +55,7 @@ document.querySelector("#mute").addEventListener("click", function () {
 		video.muted = false;
 		document.querySelector('#mute').innerHTML = "Mute";
 	}
-}
+});
 
 //volume
 document.querySelector("#slider").addEventListener("click", function () {
@@ -67,21 +67,21 @@ document.querySelector("#slider").addEventListener("click", function () {
 	//video.volume += 0.1;
 	//document.querySelector("#volume").innerHTML = (video.volume * 100)"%";
 	document.querySelector("#volume").innerHTML = `${video.volume * 100}%`;
-}
+});
 
 document.querySelector("#vintage").addEventListener("click", function () {
 	console.log("Going old school");
 	video.classList.add('oldSchool');
 	//add code
 	// video width? document.querySelector("#video width").innerHTML = 600;
-}
+});
 
 document.querySelector("#orig").addEventListener("click", function () {
 	console.log("Going new school");
 	video.classList.remove('oldSchool');
 	//add code
 	// video width? document.querySelector("#video width").innerHTML = 640;
-}
+});
 
  //volume slider, review the this.
  //styled/original is about styling css of video - how to implement CSS in Javascript?
